@@ -17,9 +17,11 @@ public class Teatro {
     public void apresentaEspetaculos(){
         System.out.println("\n--- Espetáculos Disponíveis ---");
         for (int i = 0; i < espetaculos.size(); i++) {
-            System.out.println("[" + (i + 1) + "] " + espetaculos.get(i).toString());
+            System.out.printf("%d) %s%n", i + 1, espetaculos.get(i).toString());
         }
     }
+
+
 
     public void selecionaEspetaculo(int numero){
         for (int i = 0; i < espetaculos.size(); i++) {
@@ -27,7 +29,7 @@ public class Teatro {
                 this.espetaculoSelecionado = espetaculos.get(numero - 1);
                 System.out.println("Espetaculo" + i+1 + " selecionado.");
             }else{
-                System.out.println("Erro: Número de espetáculo inválido.");
+                System.out.println("Número de espetáculo inválido.");
                 this.espetaculoSelecionado = null;
             }
         }
@@ -39,6 +41,10 @@ public class Teatro {
         }else{
             espetaculoSelecionado.novaEntrada(tipo, assento);
         }
+    }
+
+    public void cadastrarEspetaculo(Espetaculo espetaculo) {
+        this.espetaculos.add(espetaculo);
     }
 
     public double finalizaCompra(String cpf){
