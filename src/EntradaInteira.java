@@ -1,6 +1,6 @@
 public class EntradaInteira extends Entrada {
     @Override
-    public double calculaValor() {
-        return 1;
+    public double calculaValor(double precoBase) {
+        return precoBase;
     }
 }

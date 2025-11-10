@@ -8,10 +8,11 @@ public class Pedido {
         this.entradas.add(entrada);
     }
 
-    public double calculaValorTotal(){
-        for(Entrada entrada : entradas){
-            return entrada.calculaValor();
+    public double calculaValorTotal(double precoBaseEspetaculo){
+        double total = 0;
+        for (Entrada entrada : entradas) {
+            total += entrada.calculaValor(precoBaseEspetaculo);
         }
-        return 0;
+        return total;
     }
 }

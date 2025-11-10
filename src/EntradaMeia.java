@@ -1,6 +1,7 @@
 public class EntradaMeia extends Entrada {
+
     @Override
-    public double calculaValor() {
-        return 0.5;
+    public double calculaValor(double precoBase) {
+        return precoBase * 0.5;
     }
 }

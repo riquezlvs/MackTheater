@@ -40,16 +40,17 @@ public class Espetaculo {
             default -> null;
         };
     }
-    
+
     public double getPreco() {
         return preco;
     }
-    
+
+    @Override
     public String toString() {
         return "Espetáculo: " + nome + " | Data: " + data + " | Horário: " + hora + " | Preço Base: R$ " + String.format("%.2f", preco);
     }
-    
-    private void marcarAssento(int assento){
+
+    public void marcarAssento(int assento){
         this.assentos[assento -1] = true;
         System.out.println("Assento " + assento + " marcado como ocupado.");
     }
